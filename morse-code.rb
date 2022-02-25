@@ -27,3 +27,14 @@ def decode_word(args)
 end
 
 puts decode_word("-- -.--")
+
+def decode(args) 
+  answer = '' 
+  ans = args.split(/ /) 
+  ans.each{ 
+    |n| answer = answer + decode_word(n) + " " 
+  } 
+  return answer 
+end 
+puts decode(".- -... --- -..- ..-. ..- .-.. .-.. --- ..-. / .-. ..- -... .. . ...") 
+puts decode("-- -.-- -. .- -- .") 
